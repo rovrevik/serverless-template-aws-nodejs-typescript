@@ -50,4 +50,8 @@ Serverless create template for AWS, nodejs and Typescript
     - `npm install source-map-support`
     - `npm install -D @types/aws-lambda`
     - `npm install -D @types/node`
+- Replace [serverless-webpack](https://www.npmjs.com/package/serverless-webpack) with [serverless-plugin-typescript](https://www.npmjs.com/package/serverless-plugin-typescript).
+    - Replace serverless-webpack plugin with serverless-plugin-typescript in serverless configuration.
+    - Remove webpack references from serverless configuration.
+    - `npm install -D serverless-plugin-typescript`
 
