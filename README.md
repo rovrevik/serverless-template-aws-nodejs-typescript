@@ -1,3 +1,5 @@
+Serverless create template for AWS, nodejs and Typescript
+=========================================================
 
 ### Globally installed NPM modules
 - See what is installed globally. The following should execute without error.
@@ -6,6 +8,11 @@
     - `npm install -g typescript`
     - `npm install -g ts-node` and potentially `ts-node-to`
     - `npm install -g serverless`
+
+### Typescript
+- Install [Typescript](http://www.typescriptlang.org/index.html) in the project `npm install typescript`
+- Create a default [tsconfig.json](http://www.typescriptlang.org/docs/handbook/tsconfig-json.html) for the project. `npx tsc --init`
+    - [Compiler Options](https://www.typescriptlang.org/docs/handbook/compiler-options.html) `--init`
 
 ### Compare the output from various serveless project generators
 - `serverless create -t aws-nodejs` versus `serverless create -t aws-nodejs-typescript`

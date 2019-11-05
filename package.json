@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/rovrevik/serverless-template-aws-nodejs-typescript/issues"
   },
-  "homepage": "https://github.com/rovrevik/serverless-template-aws-nodejs-typescript#readme"
+  "homepage": "https://github.com/rovrevik/serverless-template-aws-nodejs-typescript#readme",
+  "dependencies": {
+    "typescript": "^3.7.2"
+  }
 }
