@@ -17,6 +17,12 @@
   },
   "homepage": "https://github.com/rovrevik/serverless-template-aws-nodejs-typescript#readme",
   "dependencies": {
+    "source-map-support": "^0.5.16"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.34",
+    "@types/node": "^12.12.5",
+    "serverless": "^1.56.1",
     "typescript": "^3.7.2"
   }
 }

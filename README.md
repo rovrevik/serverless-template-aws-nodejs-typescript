@@ -14,7 +14,7 @@ Serverless create template for AWS, nodejs and Typescript
 - Create a default [tsconfig.json](http://www.typescriptlang.org/docs/handbook/tsconfig-json.html) for the project. `npx tsc --init`
     - [Compiler Options](https://www.typescriptlang.org/docs/handbook/compiler-options.html) `--init`
 
-### Compare the output from various serveless project generators
+### Compare the output from various serverless project generators
 - `serverless create -t aws-nodejs` versus `serverless create -t aws-nodejs-typescript`
 - The plain `aws-nodejs` template produces a serverless.yml file with several examples for different event types and cloudformation resources.
 - The project templates do not seem to universally be the gold-standard for project creation.
@@ -42,3 +42,12 @@ Serverless create template for AWS, nodejs and Typescript
     > The outDir and rootDir options cannot be overwritten.
     - `outDir`: ".build",
     - `rootDir`: "./"
+
+### Serverless
+- Install serverless into the project. `npm install -D serverless`
+- Copy handler.ts and serverless.yml in from [aws-nodejs-typescript](https://github.com/serverless/serverless/tree/master/lib/plugins/create/templates/aws-nodejs-typescript).
+- Add dependencies introduced from copying in the handler implementation.
+    - `npm install source-map-support`
+    - `npm install -D @types/aws-lambda`
+    - `npm install -D @types/node`
+
