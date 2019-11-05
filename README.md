@@ -6,3 +6,32 @@
     - `npm install -g typescript`
     - `npm install -g ts-node` and potentially `ts-node-to`
     - `npm install -g serverless`
+
+### Compare the output from various serveless project generators
+- `serverless create -t aws-nodejs` versus `serverless create -t aws-nodejs-typescript`
+- The plain `aws-nodejs` template produces a serverless.yml file with several examples for different event types and cloudformation resources.
+- The project templates do not seem to universally be the gold-standard for project creation.
+- TODO what would be required to create ones own template that could be used with `create --template`?
+    - The create templates are in the serverless repository. 
+        - [aws-nodejs](https://github.com/serverless/serverless/tree/master/lib/plugins/create/templates/aws-nodejs)
+        - [aws-nodejs-typescript](https://github.com/serverless/serverless/tree/master/lib/plugins/create/templates/aws-nodejs-typescript)
+        - [aws-nodejs-ecma-script](https://github.com/serverless/serverless/tree/master/lib/plugins/create/templates/aws-nodejs-ecma-script)
+    - The serverless create commands support the template url option `create --template-url`
+
+### Update generated aws-nodejs-typescript/serverless-webpack to use serverless-plugin-typescript
+- update the serverless.yml
+    - replace `serverless-webpack` with `serverless-plugin-typescript` in the plugins section
+    - remove webpack under the custom section 
+- update the package-json
+    - remove `serverless-webpack` dev dependencies from the package.json
+        - serverless-webpack
+        - fork-ts-checker-webpack-plugin
+        - ts-loader
+        - webpack
+        - webpack-node-externals
+    - keep `source-map-support` dependency in the package.json.
+        Adding `import 'source-map-support/register';` in the handler file still has value when using `serverless-plugin-typescript`.
+ - update the tsconfig.json
+    > The outDir and rootDir options cannot be overwritten.
+    - `outDir`: ".build",
+    - `rootDir`: "./"
