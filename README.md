@@ -56,3 +56,13 @@ Serverless create template for AWS, nodejs and Typescript
     - Replace serverless-webpack plugin with serverless-plugin-typescript in serverless configuration.
     - Remove webpack references from serverless configuration.
     - `npm install -D serverless-plugin-typescript`
+
+### Linting
+- Add the [eslint](https://eslint.org/) to the project. `npm install eslint`
+    - [Configuring ESLint](https://eslint.org/docs/user-guide/configuring)
+    What configuration file format is recommended (javascript, json, yaml)? The documentation has examples in json.
+- Create the default eslint configuration. `npx eslint --init`
+- [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
+- [How do I configure my project to use typescript-eslint?](https://github.com/typescript-eslint/typescript-eslint#how-do-i-configure-my-project-to-use-typescript-eslint)
+    - [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser)
+    - [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin)

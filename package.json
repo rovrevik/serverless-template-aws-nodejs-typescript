@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint --config .eslintrc.json *.ts"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,9 @@
   "devDependencies": {
     "@types/aws-lambda": "^8.10.34",
     "@types/node": "^12.12.5",
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
+    "eslint": "^6.6.0",
     "serverless": "^1.56.1",
     "serverless-plugin-typescript": "^1.1.9",
     "typescript": "^3.7.2"
