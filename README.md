@@ -37,14 +37,16 @@ Serverless create template for AWS, nodejs and Typescript
         - webpack
         - webpack-node-externals
     - keep `source-map-support` dependency in the package.json.
-        Adding `import 'source-map-support/register';` in the handler file still has value when using `serverless-plugin-typescript`.
- - update the tsconfig.json
+        Adding `import 'source-map-support/register';` in the handler file still has value when using
+        `serverless-plugin-typescript`.
+ - Update the tsconfig.json.
     > The outDir and rootDir options cannot be overwritten.
     - `outDir`: ".build",
     - `rootDir`: "./"
 
 ### Serverless
 - Install serverless into the project. `npm install -D serverless`
+- Update the tsconfig.json compiler options to target es2017.
 - Copy handler.ts and serverless.yml in from [aws-nodejs-typescript](https://github.com/serverless/serverless/tree/master/lib/plugins/create/templates/aws-nodejs-typescript).
 - Add dependencies introduced from copying in the handler implementation.
     - `npm install source-map-support`
@@ -54,4 +56,3 @@ Serverless create template for AWS, nodejs and Typescript
     - Replace serverless-webpack plugin with serverless-plugin-typescript in serverless configuration.
     - Remove webpack references from serverless configuration.
     - `npm install -D serverless-plugin-typescript`
-
