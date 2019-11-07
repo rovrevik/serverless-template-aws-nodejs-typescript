@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx eslint --config .eslintrc.json *.ts"
+    "lint": "npx eslint --config .eslintrc.yml *.ts"
   },
   "repository": {
     "type": "git",
