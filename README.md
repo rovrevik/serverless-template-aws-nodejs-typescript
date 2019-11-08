@@ -70,7 +70,13 @@ Serverless create template for AWS, nodejs and Typescript
     - [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser)
     - [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin)
 
+### Testing
+- Install [Jest](https://jestjs.io). `npm install -D jest`
+- Install @types/jest. `npm install -D @types/jest`
+- Install [ts-jest](https://kulshekhar.github.io/ts-jest/). `npm install -D ts-jest`
+- Create the default Jest configuration (jest.config.js is created by default). `npx ts-jest config:init` 
+
 ### TODO
+- serverless authorizor
 - prettier
-- jest
 - serverless offline
