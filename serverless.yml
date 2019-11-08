@@ -6,7 +6,10 @@ service:
 
 # Add the serverless-plugin-typescript
 plugins:
+  # https://github.com/prisma/serverless-plugin-typescript
   - serverless-plugin-typescript
+  # https://github.com/dherault/serverless-offline
+  - serverless-offline #serverless-offline needs to be last in the list
 
 provider:
   name: aws

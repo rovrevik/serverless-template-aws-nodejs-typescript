@@ -6,7 +6,9 @@
   "scripts": {
     "test": "npx jest",
     "test:coverage": "npx jest --coverage",
-    "lint": "npx eslint --config .eslintrc.js *.ts"
+    "lint": "npx eslint --config .eslintrc.js *.ts",
+    "sls:offline": "npx sls offline start",
+    "sls:offline:debug": "node --inspect node_modules/.bin/serverless offline start"
   },
   "repository": {
     "type": "git",
@@ -30,6 +32,7 @@
     "eslint": "^6.6.0",
     "jest": "^24.9.0",
     "serverless": "^1.56.1",
+    "serverless-offline": "^5.12.0",
     "serverless-plugin-typescript": "^1.1.9",
     "ts-jest": "^24.1.0",
     "typescript": "^3.7.2"

@@ -76,7 +76,10 @@ Serverless create template for AWS, nodejs and Typescript
 - Install [ts-jest](https://kulshekhar.github.io/ts-jest/). `npm install -D ts-jest`
 - Create the default Jest configuration (jest.config.js is created by default). `npx ts-jest config:init` 
 
+### Serverless Offline
+- Install [serverless-offline](https://www.npmjs.com/package/serverless-offline). `npm install -D serverless-offline`
+- Add serverless-offline to the end of the plugins section of the serverless.yml (needs to be last in the list). 
+
 ### TODO
 - serverless authorizor
 - prettier
-- serverless offline
