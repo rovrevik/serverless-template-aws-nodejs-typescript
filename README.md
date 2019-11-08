@@ -60,7 +60,9 @@ Serverless create template for AWS, nodejs and Typescript
 ### Linting
 - Add the [eslint](https://eslint.org/) to the project. `npm install eslint`
     - [Configuring ESLint](https://eslint.org/docs/user-guide/configuring)
-    What configuration file format is recommended (javascript, json, yaml)? The documentation has examples in json. Going with yaml so that comments can added.
+    What configuration file format is recommended (javascript, json, yaml)?
+    The documentation has examples in json.
+    Going with js so that comments can added and jest uses js by default.
 - Create the default eslint configuration. `npx eslint --init`
 - Add `plugin:@typescript-eslint/recommended` to extends in `.eslintrc.yml`
 - [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
