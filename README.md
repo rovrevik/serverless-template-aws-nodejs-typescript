@@ -63,9 +63,26 @@ Serverless create template for AWS, nodejs and Typescript
     What configuration file format is recommended (javascript, json, yaml)?
     The documentation has examples in json.
     Going with js so that comments can added and jest uses js by default.
-- Create the default eslint configuration. `npx eslint --init`
+- Create the default eslint configuration.
+    - `%npx eslint --init`
+        - How would you like to use ESLint? `To check syntax, find problems, and enforce code style`
+        - What type of modules does your project use? `JavaScript modules (import/export)`
+        - Which framework does your project use? `None of these`
+        - Does your project use TypeScript? `Yes`
+        - Where does your code run? `Node`
+        - How would you like to define a style for your project? `Use a popular style guide`
+        - Which style guide do you want to follow? `Airbnb (https://github.com/airbnb/javascript)`
+        - What format do you want your config file to be in? `JavaScript`
+    - peerDependencies of eslint-config-airbnb-base@latest for selected configuration.
+        The config that you've selected requires the following dependencies:
+        - [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin)
+        - [eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base)
+        - [eslint](https://www.npmjs.com/package/eslint) (installed 6+)
+        - [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)
+        - [@typescript-eslint/parser](https://www.npmjs.com/package/@typescript-eslint/parser)
+    - Creates .eslintrc.js file
 - Add `plugin:@typescript-eslint/recommended` to extends in `.eslintrc.yml`
-- [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
+- [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint): Monorepo for all the tooling which enables ESLint to support TypeScript
 - [How do I configure my project to use typescript-eslint?](https://github.com/typescript-eslint/typescript-eslint#how-do-i-configure-my-project-to-use-typescript-eslint)
     - [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser)
     - [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin)
