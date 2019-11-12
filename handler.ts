@@ -65,7 +65,7 @@ function createAuthResponse(principalId: string, effect: string, resource: strin
     },
     // Optional context: demonstrate custom properties of the String, Number or Boolean type.
     context: {
-      stringKey: "stringval",
+      stringKey: 'stringval',
       numberKey: 123,
       booleanKey: true,
     },
