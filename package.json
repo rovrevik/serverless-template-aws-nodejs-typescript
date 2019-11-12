@@ -22,10 +22,12 @@
   },
   "homepage": "https://github.com/rovrevik/serverless-template-aws-nodejs-typescript#readme",
   "dependencies": {
+    "bunyan": "^1.8.12",
     "source-map-support": "^0.5.16"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.34",
+    "@types/bunyan": "^1.8.6",
     "@types/jest": "^24.0.22",
     "@types/node": "^12.12.5",
     "@typescript-eslint/eslint-plugin": "^2.6.1",

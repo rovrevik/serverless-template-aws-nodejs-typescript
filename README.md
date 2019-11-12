@@ -105,7 +105,10 @@ Serverless create template for AWS, nodejs and Typescript
  - [Introducing custom authorizers in Amazon API Gateway](https://aws.amazon.com/blogs/compute/introducing-custom-authorizers-in-amazon-api-gateway/)
  - [Use API Gateway Lambda Authorizers](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html)
  - [HTTP Endpoints with Custom Authorizers](https://serverless.com/framework/docs/providers/aws/events/apigateway/#http-endpoints-with-custom-authorizers)
+ 
+### Bunyan logger 
+- Install [Bunyan](https://www.npmjs.com/package/bunyan). `npm install bunyan`
+- Install [Bunyan](https://www.npmjs.com/package/bunyan). `npm install -D @types/bunyan`
 
 ### TODO
 - prettier
-- bunyan

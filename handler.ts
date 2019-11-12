@@ -4,9 +4,12 @@ import {
   CustomAuthorizerEvent,
   CustomAuthorizerHandler,
 } from 'aws-lambda';
+import * as bunyan from 'bunyan';
 import 'source-map-support/register';
 
-export const hello: APIGatewayProxyHandler = async (event: APIGatewayProxyEvent, _context: Context) => {
+export const hello: APIGatewayProxyHandler = async (event: APIGatewayProxyEvent, context: Context) => {
+  const logger = createLogger(context.functionName);
+  logger.info({ event }, 'handler.hello');
   return {
     statusCode: 200,
     body: JSON.stringify({
@@ -16,13 +19,33 @@ export const hello: APIGatewayProxyHandler = async (event: APIGatewayProxyEvent,
   };
 };
 
-export const authorizer: CustomAuthorizerHandler = async (event: CustomAuthorizerEvent) => {
+export const authorizer: CustomAuthorizerHandler = async (event: CustomAuthorizerEvent, context: Context) => {
+  const logger = createLogger(context.functionName);
+  logger.info({ event }, 'handler.authorizer');
   // the authorization header
   // event.authorizationToken;
 
   // Arbitrarily allow call
   return createAuthResponse('userId', 'Allow', event.methodArn);
 };
+
+function createLogger(name: string): bunyan {
+  // https://github.com/trentm/node-bunyan#constructor-api
+  const options: bunyan.LoggerOptions = {
+    name,
+    // streams?: Stream[];
+    // https://github.com/trentm/node-bunyan#levels
+    // level?: LogLevel;
+    level: bunyan.INFO,
+    // stream?: NodeJS.WritableStream;
+    // https://github.com/trentm/node-bunyan#serializers
+    // serializers?: Serializers;
+    // https://github.com/trentm/node-bunyan#src
+    // src?: boolean;
+    // [custom: string]: any;
+  };
+  return bunyan.createLogger(options);
+}
 
 /**
  * Based on: Create an API Gateway Lambda Authorizer Function in the Lambda Console
