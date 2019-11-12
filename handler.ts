@@ -5,6 +5,7 @@ import {
   CustomAuthorizerHandler,
 } from 'aws-lambda';
 import * as bunyan from 'bunyan';
+import _ from 'lodash';
 import 'source-map-support/register';
 
 export const hello: APIGatewayProxyHandler = async (event: APIGatewayProxyEvent, context: Context) => {
@@ -52,6 +53,17 @@ function createLogger(name: string): bunyan {
  * https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html#api-gateway-lambda-authorizer-lambda-function-create
  */
 function createAuthResponse(principalId: string, effect: string, resource: string): AuthResponse {
+  if (!_.trim(principalId)) {
+    throw new Error('createAuthResponse.principalId.length');
+  }
+  if (!_.trim(effect)) {
+    throw new Error('createAuthResponse.effect.length');
+  }
+  if (!_.trim(resource)) {
+    throw new Error('createAuthResponse.resource.length');
+  }
+
+  // if (effect && resource) {}
   return {
     principalId,
     policyDocument: {
