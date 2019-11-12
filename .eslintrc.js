@@ -21,5 +21,9 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'no-unused-vars': 'warn',
+    'import/prefer-default-export': 'off',
+    'arrow-body-style': 'off',
+    '@typescript-eslint/no-use-before-define': 'warn',
   },
 };

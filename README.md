@@ -47,12 +47,14 @@ Serverless create template for AWS, nodejs and Typescript
 ### Serverless
 - Install serverless into the project. `npm install -D serverless`
 - Update the tsconfig.json compiler options to target es2017.
-- Copy handler.ts and serverless.yml in from [aws-nodejs-typescript](https://github.com/serverless/serverless/tree/master/lib/plugins/create/templates/aws-nodejs-typescript).
+- Copy handler.ts and serverless.yml in from
+ [aws-nodejs-typescript](https://github.com/serverless/serverless/tree/master/lib/plugins/create/templates/aws-nodejs-typescript).
 - Add dependencies introduced from copying in the handler implementation.
     - `npm install source-map-support`
     - `npm install -D @types/aws-lambda`
     - `npm install -D @types/node`
-- Replace [serverless-webpack](https://www.npmjs.com/package/serverless-webpack) with [serverless-plugin-typescript](https://www.npmjs.com/package/serverless-plugin-typescript).
+- Replace [serverless-webpack](https://www.npmjs.com/package/serverless-webpack) with
+ [serverless-plugin-typescript](https://www.npmjs.com/package/serverless-plugin-typescript).
     - Replace serverless-webpack plugin with serverless-plugin-typescript in serverless configuration.
     - Remove webpack references from serverless configuration.
     - `npm install -D serverless-plugin-typescript`
@@ -82,7 +84,8 @@ Serverless create template for AWS, nodejs and Typescript
         - [@typescript-eslint/parser](https://www.npmjs.com/package/@typescript-eslint/parser)
     - Creates .eslintrc.js file
 - Add `plugin:@typescript-eslint/recommended` to extends in `.eslintrc.yml`
-- [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint): Monorepo for all the tooling which enables ESLint to support TypeScript
+- [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint):
+ Monorepo for all the tooling which enables ESLint to support TypeScript
 - [How do I configure my project to use typescript-eslint?](https://github.com/typescript-eslint/typescript-eslint#how-do-i-configure-my-project-to-use-typescript-eslint)
     - [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser)
     - [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin)
@@ -94,9 +97,15 @@ Serverless create template for AWS, nodejs and Typescript
 - Create the default Jest configuration (jest.config.js is created by default). `npx ts-jest config:init` 
 
 ### Serverless Offline
-- Install [serverless-offline](https://www.npmjs.com/package/serverless-offline). `npm install -D serverless-offline`
+- Install [serverless-offline](https://www.npmjs.com/package/serverless-offline)
+ `npm install -D serverless-offline`
 - Add serverless-offline to the end of the plugins section of the serverless.yml (needs to be last in the list). 
 
+### Custom Authorizer
+ - [Introducing custom authorizers in Amazon API Gateway](https://aws.amazon.com/blogs/compute/introducing-custom-authorizers-in-amazon-api-gateway/)
+ - [Use API Gateway Lambda Authorizers](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html)
+ - [HTTP Endpoints with Custom Authorizers](https://serverless.com/framework/docs/providers/aws/events/apigateway/#http-endpoints-with-custom-authorizers)
+
 ### TODO
-- serverless authorizor
 - prettier
+- bunyan
