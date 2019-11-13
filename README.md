@@ -89,6 +89,12 @@ Serverless create template for AWS, nodejs and Typescript
 - [How do I configure my project to use typescript-eslint?](https://github.com/typescript-eslint/typescript-eslint#how-do-i-configure-my-project-to-use-typescript-eslint)
     - [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser)
     - [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin)
+- [basarat - ESLint](https://basarat.gitbooks.io/typescript/docs/tools/eslint.html)
+- Install and configure [eslint-plugin-jest](https://www.npmjs.com/package/eslint-plugin-jest).
+    - `npm install -D eslint-plugin-jest`
+    - Add `jest: true` to env in `.eslintrc.yml`  
+    - Add `'plugin:jest/recommended', 'plugin:jest/style'` to extends in `.eslintrc.yml`
+    - Add `'jest'` to plugins in `.eslintrc.yml`
 
 ### Testing
 - Install [Jest](https://jestjs.io). `npm install -D jest`

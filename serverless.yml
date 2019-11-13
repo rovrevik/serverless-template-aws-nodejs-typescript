@@ -21,11 +21,11 @@ provider:
 
 functions:
   hello:
-    handler: handler.hello
+    handler: src/handler.hello
     events:
       - http:
           method: get
           path: hello
           authorizer: authorizer
   authorizer: # https://serverless.com/framework/docs/providers/aws/events/apigateway/#http-endpoints-with-custom-authorizers
-    handler: handler.authorizer
+    handler: src/handler.authorizer

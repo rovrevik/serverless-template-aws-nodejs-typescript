@@ -6,8 +6,8 @@
   "scripts": {
     "test": "npx jest",
     "test:coverage": "npx jest --coverage",
-    "lint": "npx eslint --config .eslintrc.js *.ts",
-    "lint:fix": "npx eslint --config .eslintrc.js *.ts --fix",
+    "lint": "npx eslint --config .eslintrc.js **/*.ts",
+    "lint:fix": "npx eslint --config .eslintrc.js **/*.ts --fix",
     "sls:offline": "npx sls offline start",
     "sls:offline:debug": "node --inspect node_modules/.bin/serverless offline start"
   },
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/rovrevik/serverless-template-aws-nodejs-typescript#readme",
   "dependencies": {
     "bunyan": "^1.8.12",
+    "eslint-plugin-jest": "^23.0.3",
     "lodash": "^4.17.15",
     "source-map-support": "^0.5.16"
   },
