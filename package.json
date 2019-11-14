@@ -9,7 +9,7 @@
     "lint": "npx eslint --config .eslintrc.js **/*.ts",
     "lint:fix": "npx eslint --config .eslintrc.js **/*.ts --fix",
     "sls:offline": "npx sls offline start",
-    "sls:offline:debug": "node --inspect node_modules/.bin/serverless offline start"
+    "sls:offline:debug": "DEBUG=express:* export SLS_DEBUG=* && node --inspect node_modules/.bin/serverless offline start"
   },
   "repository": {
     "type": "git",
@@ -22,14 +22,24 @@
   },
   "homepage": "https://github.com/rovrevik/serverless-template-aws-nodejs-typescript#readme",
   "dependencies": {
+    "aws-serverless-express": "^3.3.6",
+    "body-parser": "^1.19.0",
     "bunyan": "^1.8.12",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
     "eslint-plugin-jest": "^23.0.3",
+    "express": "^4.17.1",
     "lodash": "^4.17.15",
     "source-map-support": "^0.5.16"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.34",
+    "@types/aws-serverless-express": "^3.3.1",
+    "@types/body-parser": "^1.17.1",
     "@types/bunyan": "^1.8.6",
+    "@types/compression": "^1.0.1",
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.2",
     "@types/jest": "^24.0.22",
     "@types/lodash": "^4.14.146",
     "@types/node": "^12.12.5",

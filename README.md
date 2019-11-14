@@ -46,6 +46,7 @@ Serverless create template for AWS, nodejs and Typescript
 
 ### Serverless
 - Install serverless into the project. `npm install -D serverless`
+    - [Serverless examples repository](https://github.com/serverless/examples)
 - Update the tsconfig.json compiler options to target es2017.
 - Copy handler.ts and serverless.yml in from
  [aws-nodejs-typescript](https://github.com/serverless/serverless/tree/master/lib/plugins/create/templates/aws-nodejs-typescript).
@@ -116,6 +117,18 @@ Serverless create template for AWS, nodejs and Typescript
 ### Bunyan logger 
 - Install [Bunyan](https://www.npmjs.com/package/bunyan). `npm install bunyan`
 - Install [Bunyan](https://www.npmjs.com/package/bunyan). `npm install -D @types/bunyan`
+
+### Web routers ([Express](https://expressjs.com), [koa](https://koajs.com), [hapi](https://hapi.dev))
+- [AWS Serverless Express](https://github.com/awslabs/aws-serverless-express)
+    - [basic-starter](https://github.com/awslabs/aws-serverless-express/tree/master/examples/basic-starter)
+    - Add http events to the express function in the serverless.yml
+        - `http: ANY /app/`
+        - `http: ANY /app/{proxy+}`
+        - [Serverless - AWS - Events](https://serverless.com/framework/docs/providers/aws/guide/events/)
+        - [Serverless.yml Reference](https://serverless.com/framework/docs/providers/aws/guide/serverless.yml/)
+        - [Example "LAMBDA-PROXY" event (default)](https://serverless.com/framework/docs/providers/aws/events/apigateway/#example-lambda-proxy-event-default)
+        - [Amazon API Gateway- Set up Lambda Proxy Integrations in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html)
+    - TODO `Serverless: Replying timeout after 30000ms` is displayed in the serverless console.
 
 ### TODO
 - prettier

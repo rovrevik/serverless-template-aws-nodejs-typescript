@@ -29,3 +29,11 @@ functions:
           authorizer: authorizer
   authorizer: # https://serverless.com/framework/docs/providers/aws/events/apigateway/#http-endpoints-with-custom-authorizers
     handler: src/handler.authorizer
+
+  expressApp:
+    handler: src/expressHandler.express
+    events:
+      # https://serverless.com/framework/docs/providers/aws/guide/events/
+      # https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html
+      - http: ANY /app/
+      - http: ANY /app/{proxy+}
