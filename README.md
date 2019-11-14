@@ -81,6 +81,7 @@ Serverless create template for AWS, nodejs and Typescript
         - [eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base)
         - [eslint](https://www.npmjs.com/package/eslint) (installed 6+)
         - [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)
+            - Add `plugin:import/typescript` to extends in `.eslintrc.yml`
         - [@typescript-eslint/parser](https://www.npmjs.com/package/@typescript-eslint/parser)
     - Creates .eslintrc.js file
 - Add `plugin:@typescript-eslint/recommended` to extends in `.eslintrc.yml`

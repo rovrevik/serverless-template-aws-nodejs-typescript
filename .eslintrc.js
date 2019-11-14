@@ -9,6 +9,8 @@ module.exports = {
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'airbnb-base',
+    // https://github.com/benmosher/eslint-plugin-import#typescript
+    'plugin:import/typescript',
     'plugin:jest/recommended',
     'plugin:jest/style',
   ],
@@ -27,10 +29,11 @@ module.exports = {
   ],
   rules: {
     // from recommended
-    '@typescript-eslint/no-use-before-define': 'warn',
+    '@typescript-eslint/no-use-before-define': 'off',
 
     // from airbnb-base
     'import/no-unresolved': 'warn',
+    'import/prefer-default-export': 'off',
     'no-use-before-define': 'off',
     'max-len': ['error', 120, 2, {
       ignoreUrls: true,
@@ -39,5 +42,6 @@ module.exports = {
       ignoreStrings: true,
       ignoreTemplateLiterals: true,
     }],
+    'no-plusplus': 'off',
   },
 };
