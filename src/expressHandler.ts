@@ -33,10 +33,5 @@ const binaryMimeTypes = [
 const server = awsServerlessExpress.createServer(app, undefined, binaryMimeTypes);
 
 export const express: APIGatewayProxyHandler = async (event: APIGatewayProxyEvent, context: Context) => {
-  // TODO what about the return?
-  // eslint-disable-next-line no-param-reassign
-  // context.callbackWaitsForEmptyEventLoop = false;
-  const proxyServer = awsServerlessExpress.proxy(server, event, context);
-  console.log('after proxy');
-  return proxyServer as any;
+  return awsServerlessExpress.proxy(server, event, context, 'PROMISE').promise;
 };

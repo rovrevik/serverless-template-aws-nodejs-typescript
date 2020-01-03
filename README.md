@@ -40,7 +40,7 @@ Serverless create template for AWS, nodejs and Typescript
         Adding `import 'source-map-support/register';` in the handler file still has value when using
         `serverless-plugin-typescript`.
  - Update the tsconfig.json.
-    > The outDir and rootDir options cannot be overwritten.
+    - > The outDir and rootDir options cannot be overwritten.
     - `outDir`: ".build",
     - `rootDir`: "./"
 
@@ -102,12 +102,12 @@ Serverless create template for AWS, nodejs and Typescript
 - Install [Jest](https://jestjs.io). `npm install -D jest`
 - Install @types/jest. `npm install -D @types/jest`
 - Install [ts-jest](https://kulshekhar.github.io/ts-jest/). `npm install -D ts-jest`
-- Create the default Jest configuration (jest.config.js is created by default). `npx ts-jest config:init` 
+- Create the default Jest configuration (jest.config.js is created by default). `npx ts-jest config:init`
 
 ### Serverless Offline
 - Install [serverless-offline](https://www.npmjs.com/package/serverless-offline)
  `npm install -D serverless-offline`
-- Add serverless-offline to the end of the plugins section of the serverless.yml (needs to be last in the list). 
+- Add serverless-offline to the end of the plugins section of the serverless.yml (needs to be last in the list).
 
 ### Custom Authorizer
  - [Introducing custom authorizers in Amazon API Gateway](https://aws.amazon.com/blogs/compute/introducing-custom-authorizers-in-amazon-api-gateway/)
