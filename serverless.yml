@@ -13,7 +13,8 @@ plugins:
 
 provider:
   name: aws
-  runtime: nodejs10.x
+  runtime: nodejs12.x
+  stage: ${opt:stage, "dev"}
   apiGateway:
     minimumCompressionSize: 1024 # Enable gzip compression for responses > 1 KB
   environment:
@@ -28,4 +29,4 @@ functions:
           path: hello
           authorizer: authorizer
   authorizer: # https://serverless.com/framework/docs/providers/aws/events/apigateway/#http-endpoints-with-custom-authorizers
-    handler: src/handler.authorizer
+    handler: src/authHandler.authorizer
